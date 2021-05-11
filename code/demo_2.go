@@ -1,6 +1,6 @@
 package main
 
-import("fmt")
+import "fmt"
 
 func main(){
     // 一维数组
