@@ -24,7 +24,7 @@ go
 
 ## 内容概览
 
-**[基本语法](https://github.com/NaraLuwan/go/blob/main/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.md)**
+**[基本语法](https://github.com/NaraLuwan/go/blob/main/01_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.md)**
 
 **[Gin框架](https://github.com/NaraLuwan/go/blob/main/02_Gin%E6%A1%86%E6%9E%B6.md)**
 
