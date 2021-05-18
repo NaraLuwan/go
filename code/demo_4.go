@@ -13,6 +13,15 @@ type Person struct {
 func main(){
     // test_struct()
     test_json()
+
+    // 修改数据
+    var res Result
+    res.Code    = 200
+    res.Message = "success"
+   	toJson(&res)
+
+   	setData(&res)
+   	toJson(&res)
 }
 
 func test_struct(){
@@ -53,3 +62,15 @@ func test_json(){
     fmt.Println("json data:", string(jsons))
 }
 
+func setData(res *Result){
+    res.Code = 500
+    res.Message = "fail"
+}
+
+func toJson (res *Result) {
+	jsons, errs := json.Marshal(res)
+	if errs != nil {
+		fmt.Println("json marshal error:", errs)
+	}
+	fmt.Println("json data :", string(jsons))
+}
