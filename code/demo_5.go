@@ -8,6 +8,7 @@ import (
 func main() {
 	test_init()
 	testMapToJson()
+	testUpdateAndDel()
 }
 
 func test_init(){
@@ -67,4 +68,20 @@ func testParse(){
 	fmt.Println("")
 	fmt.Println("--- json to map ---")
 	fmt.Println("map data :", res2)
+}
+
+func testUpdateAndDel() {
+	person := map[int]string{
+		1 : "Tom",
+		2 : "Aaron",
+		3 : "John",
+	}
+	fmt.Println("data :",person)
+
+	delete(person, 2)
+	fmt.Println("data :",person)
+
+	person[2] = "Jack"
+	person[3] = "Kevin"
+	fmt.Println("data :",person)
 }
