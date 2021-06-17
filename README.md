@@ -8,8 +8,6 @@
 
 **[2.Gin框架](https://github.com/NaraLuwan/go/blob/main/02_Gin%E6%A1%86%E6%9E%B6.md)**
 
-**[3.gRPC](https://github.com/NaraLuwan/go/blob/main/03_gRPC.md)**
-
 ## 项目结构
 ```text
 go
