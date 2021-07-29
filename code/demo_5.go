@@ -1,18 +1,18 @@
 package main
 
 import (
-	"fmt"
 	"encoding/json"
+	"fmt"
 )
 
 func main() {
 	test_init()
-	testMapToJson()
+	//testMapToJson()
 	testUpdateAndDel()
 }
 
-func test_init(){
-    var p1 map[int]string
+func test_init() {
+	var p1 map[int]string
 	p1 = make(map[int]string)
 	p1[1] = "Tom"
 	fmt.Println("p1 :", p1)
@@ -34,19 +34,19 @@ func test_init(){
 	fmt.Println("p5 :", p5)
 
 	p6 := map[int]string{
-		1 : "Tom",
+		1: "Tom",
 	}
 	fmt.Println("p6 :", p6)
 }
 
-func testParse(){
-    res := make(map[string]interface{})
+func testParse() {
+	res := make(map[string]interface{})
 	res["code"] = 200
-	res["msg"]  = "success"
+	res["msg"] = "success"
 	res["data"] = map[string]interface{}{
-		"username" : "Tom",
-		"age"      : "30",
-		"hobby"    : []string{"读书","爬山"},
+		"username": "Tom",
+		"age":      "30",
+		"hobby":    []string{"读书", "爬山"},
 	}
 	fmt.Println("map data :", res)
 
@@ -72,16 +72,16 @@ func testParse(){
 
 func testUpdateAndDel() {
 	person := map[int]string{
-		1 : "Tom",
-		2 : "Aaron",
-		3 : "John",
+		1: "Tom",
+		2: "Aaron",
+		3: "John",
 	}
-	fmt.Println("data :",person)
+	fmt.Println("data :", person)
 
 	delete(person, 2)
-	fmt.Println("data :",person)
+	fmt.Println("data :", person)
 
 	person[2] = "Jack"
 	person[3] = "Kevin"
-	fmt.Println("data :",person)
+	fmt.Println("data :", person)
 }
