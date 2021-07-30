@@ -31,11 +31,12 @@ type Stu2 struct {
 	Name  interface{} `json:"name"`
 	Age   interface{}
 	HIgh  interface{}
-	sex   interface{}
+	Sex   interface{}
 	Class interface{} `json:"class"`
 }
 
 func main() {
+	/**============================================== marshal ===========================================================*/
 	// 实例化一个结构
 	stu := Stu{
 		Name: "Tom",
@@ -76,4 +77,19 @@ func main() {
 	}
 
 	fmt.Println(string(jsonStu2))
+
+	/**============================================== unmarshal ===========================================================*/
+	data := "{\"name\":\"张三\",\"Age\":18,\"high\":true,\"sex\":\"男\",\"CLASS\":{\"naME\":\"1班\",\"GradE\":3}}"
+	str := []byte(data)
+
+	stu3 := Stu2{}
+	// json字符串解析时，需要一个“接收体”接受解析后的数据，且Unmarshal时接收体必须传递指针。否则解析虽不报错，但数据无法赋值到接受体中。如这里用的是stu3{}接收。
+	err = json.Unmarshal(str, &stu3)
+
+	if err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println(stu3)
+
 }
