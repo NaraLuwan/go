@@ -2,6 +2,8 @@
 
 个人自学笔记，有Java基础，一周内快速入门
 
+个人经验：建议还是直接看一个开源项目，自己写unit test，过程中遇到问题再去查，效果比较好
+
 ## 内容概览
 
 **[1.基础语法](https://github.com/NaraLuwan/go/blob/main/01_%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95.md)**
