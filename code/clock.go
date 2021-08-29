@@ -8,6 +8,7 @@ import (
 )
 
 // 同步时钟
+// 在terminal中输入：nc localhost 8000
 func main() {
 
 	listener, err := net.Listen("tcp", "localhost:8000")
