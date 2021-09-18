@@ -12,4 +12,14 @@ func main() {
 	fmt.Println(map2)
 
 	fmt.Println(map1["a"] == map2["b"]) // false
+
+	m := map[string]string{
+		"1": "one",
+		"2": "two",
+		"3": "three",
+	}
+	fmt.Println(m)
+	m["1"] = "2"
+	fmt.Println(m)
+
 }
