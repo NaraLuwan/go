@@ -11,7 +11,7 @@ func main() {
 		timeoutWithBuffer(doBadThing)
 	}
 	time.Sleep(time.Second * 2)
-	fmt.Println(runtime.NumGoroutine())
+	fmt.Printf("总协程数：%d", runtime.NumGoroutine())
 }
 
 func timeoutWithBuffer(f func(chan bool)) error {
@@ -28,5 +28,5 @@ func timeoutWithBuffer(f func(chan bool)) error {
 
 func doBadThing(done chan bool) {
 	time.Sleep(time.Second)
-	done <- true
+	// done <- true
 }
